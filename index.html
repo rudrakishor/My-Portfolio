@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rudra Kishor - Portfolio</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+</head>
+
+<body>
+
+    <!-------------------------------------------- Home Section ------------------------------------------->
+
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.png" class="logo" />
+                <ul>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()" id="closeMenuIcon"></i>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills-section">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <div class="mobile-menu-footer">
+                        <p>Connect with me:</p>
+                        <div class="mobile-social-icons">
+                            <a href="https://www.linkedin.com/in/rudrakishor/" target="_blank"
+                                rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a>
+                            <a href="https://github.com/rudrakishor" target="_blank" rel="noopener noreferrer"><i
+                                    class="fa-brands fa-github"></i></a>
+                        </div>
+                    </div>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()" id="openMenuIcon"></i>
+            </nav>
+            <div class="header-text">
+                <p>Web Developer</p>
+                <h1>Hi, I'm <span>Rudra</span> <br /> Kishor from Delhi</h1>
+            </div>
+        </div>
+    </div>
+
+    <!-------------------------------------------- About Section ------------------------------------------->
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/user.png" alt="Rudra Kishor">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Hello! I’m Rudra, a BCA student at DPG Degree College passionate about web development. I enjoy
+                        building clean, responsive, and user-friendly websites. I’m eager to learn new technologies and
+                        improve my skills to deliver creative and effective web solutions. I aim to grow as a
+                        professional web developer and contribute meaningful projects to the digital world.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills', event)">Skills</p>
+                        <p class="tab-links" onclick="opentab('education', event)">Education</p>
+                        <p class="tab-links" onclick="opentab('certifications', event)">Certifications</p>
+                    </div>
+
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Web Developement</span><br>
+                                <ul class="sub-list">
+                                    <li>HTML5</li>
+                                    <li>CSS3</li>
+                                    <li>JavaScript</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2023 - Current</span><br>Pursing Bechlore of Computer Application from Maharishi
+                                Dayanad University (MDU) Rohtak, Gurgaon at DPG Degree College Gurgaon</li>
+                            <li><span>2022 - 2023</span><br>Passed 12th from CBSE Board at Government Boys Senior
+                                Secandary School Ayanagar Delhi</li>
+                            <li><span>2020 - 2021</span><br>Passed 10th from CBSE Board at Government Boys Senior
+                                Secandary School Sultanpur Delhi</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="certifications">
+                        <ul>
+                            <li><span>Web development</span><br>(HTML, CSS, JavaScript) Completed From DPG Degree
+                                College Gurgaon</li>
+                            <li><span>Spreadsheet Management</span><br>(Advance Excel) Completed From DPG Degree College
+                                Gurgaon</li>
+                            <li><span>Ecommerce</span><br>Completed From DPG Degree College Gurgaon</li>
+                            <li><span>Logistics and Supply Chain Management</span><br>Completed From NIIT Foundation
+                                Delhi</li>
+                            <li><span>Bussiness Blaster Program</span><br>Reached the district level in Delhi
+                                Government's Bussiness Blaster Program with group project at Government Boys Senior
+                                Secandary School</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-------------------------------------------- Skills Section ------------------------------------------->
+
+    <div id="skills-section">
+        <div class="container">
+            <h1 class="sub-title">My Skills</h1>
+
+            <div class="skills-accordion">
+
+                <div class="accordion-item">
+                    <button class="accordion-header"><i class="fa-solid fa-computer"></i> Advance Computer
+                        Knowledge</button>
+                    <div class="accordion-content">
+                        <div class="skill-detail"><img src="images/oops.png" alt="OOPs"><span>Object-Oriented
+                                Programming (OOPs)</span></div>
+                        <div class="skill-detail"><img src="images/digital-electronics.png"
+                                alt="Digital Electronics"><span>Digital Electronics</span></div>
+                        <div class="skill-detail"><img src="images/dbms.png" alt="DBMS"><span>Database Management
+                                Systems (DBMS)</span></div>
+                        <div class="skill-detail"><img src="images/os.png" alt="OS"><span>Operating Systems</span></div>
+                        <div class="skill-detail"><img src="images/network.png" alt="Computer Networks"><span>Computer
+                                Networks</span></div>
+                        <div class="skill-detail"><img src="images/dsa.png" alt="DSA"><span>Data Structures & Algorithms
+                                (DSA)</span></div>
+                        <div class="skill-detail"><img src="images/software_engineering.png" alt="SDLC"><span>Software
+                                Engineering (SDLC)</span></div>
+                        <div class="skill-detail"><img src="images/git.png" alt="Git & GitHub"><span>Git & GitHub</span>
+                        </div>
+                        <div class="skill-detail"><img src="images/ai.png" alt="AI"><span>Basic Artificial Intelligence
+                                (AI)</span></div>
+                        <div class="skill-detail"><img src="images/cloud.png" alt="Cloud"><span>Basics Cloud
+                                Computing</span></div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header"><i class="fa-solid fa-laptop-code"></i> Web Designing</button>
+                    <div class="accordion-content">
+                        <div class="skill-detail"><img src="images/html.png" alt="HTML5"><span>HTML5</span></div>
+                        <div class="skill-detail"><img src="images/css.png" alt="CSS3"><span>CSS3</span></div>
+                        <div class="skill-detail"><img src="images/js.png" alt="JavaScript"><span>JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header"><i class="fa-solid fa-database"></i> Database</button>
+                    <div class="accordion-content">
+                        <div class="skill-detail"><img src="images/sql.png" alt="SQL"><span>SQL</span></div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header"><i class="fa-solid fa-code"></i> Programming Languages</button>
+                    <div class="accordion-content">
+                        <div class="skill-detail"><img src="images/c.png" alt="C"><span>C</span></div>
+                        <div class="skill-detail"><img src="images/c++.png" alt="C++"><span>C++</span></div>
+                        <div class="skill-detail"><img src="images/dsa.png" alt="DSA"><span>DSA</span></div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header"><i class="fa-solid fa-gear"></i> Tools & Softwares</button>
+                    <div class="accordion-content">
+                        <div class="skill-detail"><img src="images/vs.png" alt="VS Code"><span>Visual Studio
+                                Code</span></div>
+                        <div class="skill-detail"><img src="images/git.png" alt="Git & GitHub"><span>Git & GitHub</span>
+                        </div>
+                        <div class="skill-detail"><img src="images/mysql.png" alt="MySQL"><span>MySQL</span></div>
+                        <div class="skill-detail"><img src="images/turbo.png" alt="Turbo C++"><span>Turbo C/C++</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header"><i class="fa-brands fa-windows"></i> Operating System</button>
+                    <div class="accordion-content">
+                        <div class="skill-detail"><img src="images/windows.png" alt="Windows"><span>Windows</span></div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header"><i class="fa-solid fa-briefcase"></i> Advance MS Office</button>
+                    <div class="accordion-content">
+                        <div class="skill-detail"><img src="images/excel.png" alt="Excel"><span>Excel</span></div>
+                        <div class="skill-detail"><img src="images/word.png" alt="Word"><span>Word</span></div>
+                        <div class="skill-detail"><img src="images/powerpoint.png"
+                                alt="PowerPoint"><span>PowerPoint</span></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-------------------------------------------- Projects Section ------------------------------------------->
+
+    <div id="projects">
+        <div class="container">
+            <h1 class="sub-title">My Projects</h1>
+            <div class="project-list">
+
+                <div class="project-card">
+                    <div class="project-img-container">
+                        <img src="images/falcon9.png" alt="Falcon 9 Landing Page Project">
+                        <div class="project-layer">
+                            <a href="https://rudrakishor.github.io/falcon9-landing-page/" target="_blank"
+                                rel="noopener noreferrer">
+                                <i class="fa-solid fa-up-right-from-square"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Falcon 9 Landing Page</h3>
+                        <p>A static landing page inspired by the official SpaceX website, focusing on structuring
+                            content with semantic HTML5 and applying custom styling with CSS3.</p>
+                        <div class="tech-stack">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>Git & GitHub</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/RudraKishor/falcon9-landing-page" target="_blank"
+                                rel="noopener noreferrer">
+                                <i class="fa-brands fa-github"></i> Source Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-------------------------------------------- Contact Section ------------------------------------------->
+
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i> rudrakishor2019@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i> +91 8877022999</p>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/rudrakishor/" target="_blank" rel="noopener noreferrer"><i
+                                class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/rudrakishor" target="_blank" rel="noopener noreferrer"><i
+                                class="fa-brands fa-github"></i></a>
+                    </div>
+                    <a href="images/cv.pdf" target="_blank" class="btn btn2">View CV</a>
+                </div>
+
+                <div class="contact-right">
+                    <form action="https://formspree.io/f/myzjjbyz" method="POST">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required id="contactEmail">
+                        <small id="emailWarning" class="warning-text"></small>
+                        <textarea name="Message" rows="6" placeholder="Message" required></textarea>
+                        <span id="msg"></span>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- -----------Footer/Copyright Section -->
+
+    <footer>
+        <div class="container">
+            <p>Copyright &copy; <span id="current-year"></span> Rudra Kishor. All Rights Reserved.</p>
+            <p>Made with <i class="fa-solid fa-heart"></i></p>
+        </div>
+    </footer>
+
+
+
+
+
+
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
