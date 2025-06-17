@@ -81,7 +81,7 @@ nav ul li a:hover::after {
     width: 100%;
 }
 
-nav .fa-solid { /* Hidden on desktop by default */
+nav .fa-solid { 
     display: none;
 }
 
@@ -575,12 +575,12 @@ footer .fa-heart {
 @media only screen and (max-width: 600px) {
     /* Header */
     #header {
-        background-image: url(images/background.png); /* Changed from none */
+        background-image: url(images/background.png); 
         background-size: cover;
         background-position: center;
         height: auto;
         padding-bottom: 50px;
-        background-color: #010201; /* Ensured consistent background color */
+        background-color: #010201; 
     }
     .header-text {
         margin-top: 100px;
@@ -600,19 +600,19 @@ footer .fa-heart {
         cursor: pointer;
     }
 
-    #openMenuIcon { /* <<< NEW RULE: Only for the hamburger icon */
-        position: fixed; /* Screen par fixed rahega, scroll nahi hoga */
-        top: 20px;       /* Screen ke top se 20px neeche */
-        right: 20px;     /* Screen ke right se 20px andar */
-        z-index: 1000;   /* Sabse upar dikhne ke liye */
-        color: #fff;    /* White color taki har background par dikhe */
-        background-color: rgba(0, 0, 0, 0.5); /* Halka sa background for visibility on any image/content */
-        padding: 5px; /* Thoda padding icon ke around */
-        border-radius: 5px; /* Halke se gol किनारे */
+    #openMenuIcon { 
+        position: fixed; 
+        top: 20px;       
+        right: 20px;     
+        z-index: 1000;  
+        color: #fff;    
+        background-color: rgba(0, 0, 0, 0.5); 
+        padding: 5px; 
+        border-radius: 5px; 
     }
 
     nav ul {
-        background: rgba(38, 43, 38, 0.39); /* Dark semi-transparent background */
+        background: rgba(38, 43, 38, 0.39); 
         backdrop-filter: blur(8px);
         -webkit-backdrop-filter: blur(8px);
         position: fixed;
@@ -620,12 +620,12 @@ footer .fa-heart {
         right: -200px;
         width: 200px;
         height: 100vh;
-        padding-top: 60px; /* Space for cross button + padding for first item */
+        padding-top: 60px; 
         z-index: 2;
         transition: right 0.5s ease-out, transform 0.5s ease-out;
         flex-direction: column;
-        justify-content: space-between; /* To push mobile-menu-footer to bottom */
-        text-align: center; /* Center aligns inline-block children */
+        justify-content: space-between; 
+        text-align: center; 
     }
     nav ul.active {
         right: 0;
@@ -636,9 +636,9 @@ footer .fa-heart {
         margin: 15px 0;
         opacity: 0;
         transform: translateX(50px);
-        /* REMOVED: transition: opacity 0.3s ease-out, transform 0.3s ease-out; */
+        
     }
-    nav ul .fa-xmark { /* Targeting the cross icon inside the UL */
+    nav ul .fa-xmark { 
         position: absolute;
         top: 15px;
         left: 15px;
@@ -653,19 +653,19 @@ footer .fa-heart {
         transform: translateX(0);
         animation: slideInFromRight 0.4s ease-out forwards;
     }
-    nav ul.active li:nth-child(2) { /* First list item (Home) */
+    nav ul.active li:nth-child(2) { 
         animation-delay: 0.1s;
     }
-    nav ul.active li:nth-child(3) { /* Second list item (About) */
+    nav ul.active li:nth-child(3) { 
         animation-delay: 0.2s;
     }
-    nav ul.active li:nth-child(4) { /* Third list item (Skills) */
+    nav ul.active li:nth-child(4) { 
         animation-delay: 0.3s;
     }
-    nav ul.active li:nth-child(5) { /* Fourth list item (Projects) */
+    nav ul.active li:nth-child(5) { 
         animation-delay: 0.4s;
     }
-    nav ul.active li:nth-child(6) { /* Fifth list item (Contact) */
+    nav ul.active li:nth-child(6) { 
         animation-delay: 0.5s;
     }
 
@@ -677,7 +677,7 @@ footer .fa-heart {
         border: 1px solid rgba(255, 255, 255, 0.4);
         border-radius: 25px;
         display: inline-block;
-        transition: all 0.2s ease; /* <<< NEW: Simplified to 'all' for smoother effects */
+        transition: all 0.2s ease; 
         width: calc(100% - 30px);
         text-align: center;
         background-color: #ff004f;
@@ -690,29 +690,32 @@ footer .fa-heart {
 
     nav ul li a:hover {
         color: #fff;
-        background: #e60045; /* Slightly darker red on hover */
+        background: #e60045;
         border-color: #fff;
-        transform: translateY(-2px); /* <<< Add this: Slight lift on hover */
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* <<< Add this: Subtle shadow on hover */
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
     }
 
-    nav ul li a:active { /* <<< NEW RULE: Add this */
-        transform: translateY(1px); /* Button thoda neeche jayega */
-        box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3), /* Inset shadow for pressed look */
-                    0 0 5px rgba(255, 0, 79, 0.7); /* Keep subtle outer glow */
-        background-color: #c4003d; /* Darker red when pressed */
-        border-color: #c4003d; /* Match border color */
+    nav ul li a:active 
+        transform: translateY(1px); 
+        box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3),
+                    0 0 5px rgba(255, 0, 79, 0.7); 
+        background-color: #c4003d; 
+        border-color: #c4003d; 
     }
 
     /* Mobile Menu Footer (Connect with me) */
     .mobile-menu-footer {
         display: block;
         width: 100%;
+        padding-bottom: 30px;
         padding: 20px 0;
         text-align: center;
         color: #ababab;
         font-size: 14px;
-        margin-top: 200px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
     }
     .mobile-menu-footer p {
         margin-bottom: 10px;
