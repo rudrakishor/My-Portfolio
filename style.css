@@ -6,11 +6,8 @@
 
 * {
     margin: 0;
-
     padding: 0;
-
     font-family: "Poppins", sans-serif;
-
     box-sizing: border-box;
 }
 
@@ -20,7 +17,6 @@ html {
 
 body {
     background: #010201;
-
     color: #fff;
 }
 
@@ -32,27 +28,18 @@ body {
 
 #header {
     width: 100%;
-
     height: 100vh;
-
     background-image: url(images/background.png);
-
     background-size: cover;
-
     background-position: center;
-
     background-color: #010201;
 }
 
 nav {
     display: flex;
-
     align-items: center;
-
     justify-content: space-between;
-
     flex-wrap: wrap;
-
     padding-top: 10px;
 }
 
@@ -62,47 +49,32 @@ nav {
 
 nav ul li {
     display: inline-block;
-
     list-style: none;
-
     margin: 10px 20px;
 }
 
 nav ul li a {
     color: #fff;
-
     text-decoration: none;
-
     font-size: 18px;
-
     position: relative;
-
     display: inline-block;
-
     transition: transform 0.3s ease, color 0.3s ease;
 }
 
 nav ul li a:hover {
     color: #ff004f;
-
     transform: translateY(-5px);
 }
 
 nav ul li a::after {
     content: "";
-
     width: 0;
-
     height: 3px;
-
     background: #ff004f;
-
     position: absolute;
-
     left: 0;
-
     bottom: -6px;
-
     transition: width 0.5s;
 }
 
@@ -111,20 +83,16 @@ nav ul li a:hover::after {
 }
 
 nav .fa-solid {
-    /* Hidden on desktop by default */
-
     display: none;
 }
 
 .header-text {
     margin-top: 20%;
-
     font-size: 30px;
 }
 
 .header-text h1 {
     font-size: 60px;
-
     margin-top: 20px;
 }
 
@@ -136,15 +104,12 @@ nav .fa-solid {
 
 #about {
     padding: 80px 0;
-
     color: #ababab;
 }
 
 .row {
     display: flex;
-
     justify-content: space-between;
-
     flex-wrap: wrap;
 }
 
@@ -154,7 +119,6 @@ nav .fa-solid {
 
 .about-col-1 img {
     width: 100%;
-
     border-radius: 15px;
 }
 
@@ -164,41 +128,29 @@ nav .fa-solid {
 
 .about-col-2 p {
     font-size: 1.25rem;
-
     line-height: 1.4;
-
     margin-bottom: 25px;
-
     color: #ffffff;
 }
 
 .sub-title {
     font-size: 60px;
-
     font-weight: 600;
-
     color: #fff;
 }
 
 .tab-titles {
     display: flex;
-
     margin: 20px 0 20px;
 }
 
 #about .tab-links {
     margin-right: 50px;
-
     font-size: 22px;
-
     font-weight: 500;
-
     cursor: pointer;
-
     position: relative;
-
     color: #fff;
-
     transition: color 0.3s ease;
 }
 
@@ -208,19 +160,12 @@ nav .fa-solid {
 
 #about .tab-links::after {
     content: "";
-
     width: 0;
-
     height: 3px;
-
     background: #ff004f;
-
     position: absolute;
-
     left: 0;
-
     bottom: -8px;
-
     transition: width 0.5s;
 }
 
@@ -234,17 +179,13 @@ nav .fa-solid {
 
 .tab-contents ul li {
     list-style: none;
-
     margin: 10px 0;
-
     font-size: 18px;
-
     color: #ababab;
 }
 
 .tab-contents .sub-list {
     margin-top: 0;
-
     margin-left: 20px;
 }
 
@@ -262,17 +203,13 @@ nav .fa-solid {
 
 .tab-contents ul li span {
     color: #b54769;
-
     font-size: 19px;
-
     font-weight: 500;
 }
 
 .tab-contents {
     display: none;
-
     margin-top: 15px;
-
     min-height: 350px;
 }
 
@@ -288,9 +225,7 @@ nav .fa-solid {
 
 .skills-accordion {
     width: 100%;
-
     max-width: 800px;
-
     margin: 30px auto;
 }
 
@@ -300,115 +235,80 @@ nav .fa-solid {
 
 .accordion-header {
     width: 100%;
-
     background: transparent;
-
     border: none;
-
     outline: none;
-
     padding: 20px 0;
-
     text-align: left;
-
     color: #fff;
-
     font-size: 20px;
-
     font-weight: 500;
-
     cursor: pointer;
-
     display: flex;
-
     justify-content: space-between;
-
     align-items: center;
-
     transition: transform 0.3s ease-out, color 0.3s ease-out;
 }
 
 .accordion-header:hover {
     transform: translateY(-5px) scale(1.03);
-
     color: #ff004f;
 }
 
 .accordion-header i {
     margin-right: 12px;
-
     color: #ff004f;
-
     width: 25px;
 }
 
 .accordion-header::after {
     content: "\002B";
-
     font-size: 30px;
-
     color: #ff004f;
-
     transition: transform 0.3s;
 }
 
 .accordion-header.active::after {
     content: "\2212";
-
     transform: rotate(180deg);
 }
 
 .accordion-content {
     max-height: 0;
-
     overflow: hidden;
-
     transition: max-height 0.5s ease-out;
-
     padding: 0 10px;
 }
 
 .skill-detail {
     display: flex;
-
     align-items: center;
-
     margin: 15px 0;
-
     background: #262626;
-
     padding: 10px;
-
     border-radius: 5px;
-
     transition: transform 0.3s ease-out, opacity 0.3s ease-out;
 }
 
 .skill-detail img {
     width: 30px;
-
     height: 30px;
-
     margin-right: 15px;
 }
 
 .skill-detail span {
     color: #fff;
-
     font-size: 16px;
 }
 
 .accordion-content:hover .skill-detail {
     transform: scale(0.95);
-
     opacity: 0.7;
 }
 
 .accordion-content .skill-detail:hover {
     transform: scale(1.05) translateY(-5px);
-
     opacity: 1;
-
     z-index: 10;
 }
 
@@ -420,21 +320,15 @@ nav .fa-solid {
 
 .project-list {
     display: grid;
-
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-
     gap: 40px;
-
     margin-top: 50px;
 }
 
 .project-card {
     background: #262626;
-
     border-radius: 10px;
-
     overflow: hidden;
-
     transition: transform 0.3s ease;
 }
 
@@ -444,41 +338,27 @@ nav .fa-solid {
 
 .project-img-container {
     position: relative;
-
     width: 100%;
-
     height: 220px;
 }
 
 .project-img-container img {
     width: 100%;
-
     height: 100%;
-
     object-fit: cover;
 }
 
 .project-layer {
     position: absolute;
-
     top: 0;
-
     left: 0;
-
     width: 100%;
-
     height: 100%;
-
     background: linear-gradient(rgba(0, 0, 0, 0.5), #ff004f);
-
     display: flex;
-
     justify-content: center;
-
     align-items: center;
-
     opacity: 0;
-
     transition: opacity 0.4s ease;
 }
 
@@ -488,23 +368,14 @@ nav .fa-solid {
 
 .project-layer a {
     color: #ff004f;
-
     background: #fff;
-
     width: 60px;
-
     height: 60px;
-
     border-radius: 50%;
-
     display: flex;
-
     justify-content: center;
-
     align-items: center;
-
     font-size: 24px;
-
     text-decoration: none;
 }
 
@@ -514,35 +385,24 @@ nav .fa-solid {
 
 .project-info h3 {
     font-size: 22px;
-
     font-weight: 600;
-
     color: #ef155a;
 }
 
 .project-info p {
     color: #ffffff;
-
     font-size: 17px;
-
     line-height: 1;
-
     margin: 4px 0 15px 0;
 }
 
 .tech-stack span {
     background: #080808;
-
     color: #ababab;
-
     font-size: 13px;
-
     padding: 5px 10px;
-
     border-radius: 5px;
-
     margin-right: 8px;
-
     display: inline-block;
 }
 
@@ -552,25 +412,17 @@ nav .fa-solid {
 
 .project-links a {
     color: #fff;
-
     text-decoration: none;
-
     font-size: 16px;
-
     align-self: flex-start;
-
     border: 1px solid #ff004f;
-
     padding: 8px 15px;
-
     border-radius: 5px;
-
     transition: background 0.5s;
 }
 
 .project-links a:hover {
     background: #ff004f;
-
     border-color: #ff004f;
 }
 
@@ -594,15 +446,12 @@ nav .fa-solid {
 
 .contact-left p {
     margin-top: 15px;
-
     font-size: 17px;
 }
 
 .contact-left p i {
     color: #ff004f;
-
     margin-right: 15px;
-
     font-size: 22px;
 }
 
@@ -612,47 +461,30 @@ nav .fa-solid {
 
 .social-icons a {
     text-decoration: none;
-
     font-size: 30px;
-
     margin-right: 15px;
-
     color: #ababab;
-
     display: inline-block;
-
     transition: transform 0.3s, color 0.3s;
 }
 
 .social-icons a:hover {
     color: #ff004f;
-
     transform: translateY(-5px);
 }
 
 .btn.btn2 {
     display: inline-block;
-
     background: #ff004f;
-
     color: #fff;
-
     font-size: 18px;
-
     font-weight: 500;
-
     padding: 14px 40px;
-
     border-radius: 6px;
-
     text-decoration: none;
-
     border: none;
-
     cursor: pointer;
-
     margin-top: 30px;
-
     transition: background 0.3s;
 }
 
@@ -669,21 +501,13 @@ nav .fa-solid {
 form input,
 form textarea {
     width: 100%;
-
     border: 0;
-
     outline: none;
-
     background: #262626;
-
     padding: 15px;
-
     margin-bottom: 20px;
-
     color: #fff;
-
     font-size: 16px;
-
     border-radius: 6px;
 }
 
@@ -693,15 +517,10 @@ form .btn2 {
 
 #msg {
     color: #61b752;
-
     display: block;
-
     font-size: 14px;
-
     font-weight: 500;
-
     margin-top: -10px;
-
     margin-bottom: 10px;
 }
 
@@ -709,17 +528,11 @@ form .btn2 {
 
 .warning-text {
     color: #ff4d4d;
-
     font-size: 0.85rem;
-
     margin-top: -15px;
-
     margin-bottom: 10px;
-
     display: block;
-
     opacity: 0;
-
     transition: opacity 0.3s ease-in-out;
 }
 
@@ -731,25 +544,17 @@ form .btn2 {
 
 footer {
     width: 100%;
-
     background: #262626;
-
     padding: 25px 0;
-
     text-align: center;
-
     margin-top: 60px;
-
     border-top: 1px solid #333;
 }
 
 footer p {
     color: #ababab;
-
     font-weight: 300;
-
     margin: 5px 0;
-
     font-size: 15px;
 }
 
@@ -770,30 +575,33 @@ footer .fa-heart {
 
     #header {
         background-image: url(images/background.png);
-
-        /* Changed from none */
-
         background-size: cover;
-
         background-position: center;
-
         height: auto;
-
         padding-bottom: 50px;
-
         background-color: #010201;
-
-        /* Ensured consistent background color */
     }
 
     .header-text {
         margin-top: 100px;
-
         font-size: 16px;
     }
 
     .header-text h1 {
         font-size: 30px;
+    }
+
+    nav .fa-bars {
+        display: block;
+        font-size: 25px;
+        cursor: pointer;
+    }
+
+    nav .fa-xmark {
+        display: none;
+        /* Cross icon by default hide rahega */
+        font-size: 25px;
+        cursor: pointer;
     }
 
     .logo {
@@ -804,84 +612,36 @@ footer .fa-heart {
 
     nav .fa-solid {
         display: block;
-
         font-size: 25px;
-
         cursor: pointer;
     }
 
     #openMenuIcon {
-        /* <<< NEW RULE: Only for the hamburger icon */
-
         position: fixed;
-
-        /* Screen par fixed rahega, scroll nahi hoga */
-
         top: 20px;
-
-        /* Screen ke top se 20px neeche */
-
         right: 20px;
-
-        /* Screen ke right se 20px andar */
-
         z-index: 1000;
-
-        /* Sabse upar dikhne ke liye */
-
         color: #fff;
-
-        /* White color taki har background par dikhe */
-
         background-color: rgba(0, 0, 0, 0.5);
-
-        /* Halka sa background for visibility on any image/content */
-
         padding: 5px;
-
-        /* Thoda padding icon ke around */
-
         border-radius: 5px;
-
-        /* Halke se gol किनारे */
     }
 
     nav ul {
         background: rgba(38, 43, 38, 0.39);
-
-        /* Dark semi-transparent background */
-
         backdrop-filter: blur(8px);
-
         -webkit-backdrop-filter: blur(8px);
-
         position: fixed;
-
         top: 0;
-
         right: -200px;
-
         width: 200px;
-
         height: 100vh;
-
         padding-top: 60px;
-
-        /* Space for cross button + padding for first item */
-
         z-index: 2;
-
         transition: right 0.5s ease-out, transform 0.5s ease-out;
-
         flex-direction: column;
-
         justify-content: space-between;
-
-        /* To push mobile-menu-footer to bottom */
-
         text-align: center;
-
-        /* Center aligns inline-block children */
     }
 
     nav ul.active {
@@ -895,26 +655,16 @@ footer .fa-heart {
         margin: 15px 0;
         opacity: 0;
         transform: translateX(25px);
-        /* Start position thoda paas rakha hai */
         transition: opacity 0.5s ease-out, transform 0.5s ease-out;
-        /* Main transition effect */
     }
 
     nav ul .fa-xmark {
-        /* Targeting the cross icon inside the UL */
-
         position: absolute;
-
         top: 15px;
-
         left: 15px;
-
         font-size: 25px;
-
         color: #fff;
-
         cursor: pointer;
-
         z-index: 3;
     }
 
@@ -945,99 +695,102 @@ footer .fa-heart {
         transition-delay: 0.9s;
     }
 
-    /* Menu Item Button Appearance */
 
-    nav ul li a {
+    /* ----------------------------real code--------------------------------- */
+    /* nav ul li a {
         color: #fff !important;
-
         text-decoration: none;
-
         padding: 8px 15px;
-
         border: 1px solid rgba(255, 255, 255, 0.4);
-
         border-radius: 25px;
-
         display: inline-block;
-
         transition: all 0.5s ease;
-
-        /* <<< NEW: Simplified to 'all' for smoother effects */
-
         width: calc(100% - 30px);
-
         text-align: center;
-
         background-color: #ff004f;
+    } */
+    /* ----------------------------real code--------------------------------- */
+
+
+    /* ----------------------------second code imp--------------------------------- */
+    nav ul li a {
+        color: #fff;
+        background-color: #4b020251;
+        border: 1px solid #ff004f;
+        display: block;
+        text-align: center;
+        padding: 10px 15px;
+        border-radius: 25px;
+        text-decoration: none;
+        transition: all 0.3s ease;
     }
 
-    /* NEW: Remove the underline from the menu links */
+    /* ----------------------------second code imp--------------------------------- */
+
+
+
+
+
+
+    /* ----------------------------real code--------------------------------- */
+    /* nav ul li a::after {
+        content: none;
+    }  */
+    /* ----------------------------real code--------------------------------- */
 
     nav ul li a::after {
-        content: none;
+        display: none;
     }
+
+
+    /* ----------------------------real code--------------------------------- */
+    /* nav ul li a:hover {
+        color: #fff;
+        background: #e60045;
+        border-color: #fff;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}  */
+    /* ----------------------------real code--------------------------------- */
 
     nav ul li a:hover {
-        color: #fff;
-
-        background: #e60045;
-
-        /* Slightly darker red on hover */
-
+        background-color: #3a3a3a;
         border-color: #fff;
-
         transform: translateY(-2px);
-
-        /* <<< Add this: Slight lift on hover */
-
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-
-        /* <<< Add this: Subtle shadow on hover */
     }
 
+    /* ----------------------------real code--------------------------------- */
     nav ul li a:active {
-        /* <<< NEW RULE: Add this */
-
         transform: translateY(1px);
-
-        /* Button thoda neeche jayega */
-
         box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3),
-            /* Inset shadow for pressed look */
             0 0 5px rgba(255, 0, 79, 0.7);
-
-        /* Keep subtle outer glow */
-
         background-color: #c4003d;
-
-        /* Darker red when pressed */
-
         border-color: #c4003d;
-
-        /* Match border color */
     }
+
+    /* ----------------------------real code--------------------------------- */
+
+    nav ul li a.active-link {
+        background-color: #ff004f;
+        /*test code */
+        color: #fff;
+        border-color: #ff004f;
+        font-weight: 600;
+    }
+
 
     /* Mobile Menu Footer (Connect with me) */
 
     .mobile-menu-footer {
         display: block;
-
         width: 100%;
-
         padding-bottom: 30px;
-
         padding: 20px 0;
-
         text-align: center;
-
         color: #ababab;
-
         font-size: 14px;
-
         position: absolute;
-
         bottom: 0;
-
         left: 0;
     }
 
@@ -1047,17 +800,13 @@ footer .fa-heart {
 
     .mobile-social-icons a {
         color: #ababab;
-
         font-size: 25px;
-
         margin: 0 10px;
-
         transition: color 0.3s ease, transform 0.3s ease;
     }
 
     .mobile-social-icons a:hover {
         color: #ff004f;
-
         transform: translateY(-3px);
     }
 
@@ -1065,6 +814,11 @@ footer .fa-heart {
 
     .sub-title {
         font-size: 40px;
+    }
+
+    .header-text {
+        margin-top: 70%;
+        font-size: 16px;
     }
 
     .about-col-1,
@@ -1078,61 +832,42 @@ footer .fa-heart {
 
     .about-col-1 img {
         width: 100%;
-
         height: auto;
-
         display: block;
-
         max-width: 100%;
     }
 
     .about-col-2 p {
         font-size: 1rem;
-
         line-height: 1.5;
     }
 
     .tab-titles {
         display: flex;
-
         justify-content: space-evenly;
-
         margin: 40px 0 20px;
-
         flex-wrap: nowrap;
     }
 
     #about .tab-links {
-        /* Button styles */
-
         border: 1px solid #ff004f;
-
         padding: 8px 15px;
-
         border-radius: 50px;
-
         transition: background-color 0.5s, color 0.5s;
-
         margin-right: 0;
-
         font-size: 16px;
-
         text-align: center;
-
         color: #fff;
     }
 
     #about .tab-links:hover {
         background-color: #ff004f;
-
         color: #fff;
     }
 
     #about .tab-links.active-link {
         background-color: #ff004f;
-
         color: #fff;
-
         font-weight: 600;
     }
 
@@ -1142,9 +877,7 @@ footer .fa-heart {
 
     .tab-contents {
         display: none;
-
         margin-top: 15px;
-
         min-height: 340px;
     }
 
@@ -1166,9 +899,7 @@ footer .fa-heart {
 
     .accordion-header {
         font-size: 18px;
-
         padding: 15px 0;
-
         align-items: center;
     }
 
@@ -1178,9 +909,7 @@ footer .fa-heart {
 
     .skill-detail img {
         width: 25px;
-
         height: 25px;
-
         margin-right: 10px;
     }
 
@@ -1188,7 +917,6 @@ footer .fa-heart {
 
     .project-list {
         grid-template-columns: 1fr;
-
         gap: 30px;
     }
 
@@ -1206,13 +934,11 @@ footer .fa-heart {
 
     .tech-stack span {
         font-size: 12px;
-
         padding: 4px 8px;
     }
 
     .project-links a {
         font-size: 14px;
-
         padding: 6px 12px;
     }
 
