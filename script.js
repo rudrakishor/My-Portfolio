@@ -54,9 +54,8 @@ if (accordionHeaders.length > 0) {
 }
 
 // --- Contact Form Logic ---
-// Ensure these are defined before the form.addEventListener if they are used within it
-const contactEmailInput = document.getElementById("contactEmail"); // This was defined globally earlier, re-confirming here
-const emailWarning = document.getElementById("emailWarning"); // This was defined globally earlier, re-confirming here
+const contactEmailInput = document.getElementById("contactEmail"); 
+const emailWarning = document.getElementById("emailWarning"); 
 
 if (form) {
     function showWarning(message) {
@@ -135,22 +134,48 @@ if (yearSpan) {
 function openmenu() {
     if (sidemenu) {
         sidemenu.classList.add("active");
-        if (openMenuIcon) openMenuIcon.style.display = 'none'; // Hide hamburger icon
-        if (closeMenuIcon) closeMenuIcon.style.display = 'block'; // Show close icon
+        if (openMenuIcon) openMenuIcon.style.display = 'none'; 
+        if (closeMenuIcon) closeMenuIcon.style.display = 'block';
     }
 }
 function closemenu() {
     if (sidemenu) {
         sidemenu.classList.remove("active");
-        if (openMenuIcon) openMenuIcon.style.display = 'block'; // Show hamburger icon
-        if (closeMenuIcon) closeMenuIcon.style.display = 'none'; // Hide close icon
+        if (openMenuIcon) openMenuIcon.style.display = 'block'; // 
+        if (closeMenuIcon) closeMenuIcon.style.display = 'none'; // 
     }
 }
 
 // --- Initial setup on page load ---
 document.addEventListener('DOMContentLoaded', () => {
-    // Ensure the close icon is hidden when the page first loads
     if (closeMenuIcon) closeMenuIcon.style.display = 'none';
-    // Ensure the open icon (hamburger) is visible by default on mobile, if menu is closed
     if (openMenuIcon) openMenuIcon.style.display = 'block';
 });
+
+
+
+let sections = document.querySelectorAll('div[id]');
+let navLinks = document.querySelectorAll('nav ul li a');
+
+
+window.onscroll = () => {
+    sections.forEach(sec => {
+        let top = window.scrollY;
+        let offset = sec.offsetTop - 150; 
+        let height = sec.offsetHeight;
+        let id = sec.getAttribute('id');
+
+
+        if (top >= offset && top < offset + height) {
+            navLinks.forEach(links => {
+                links.classList.remove('active-link');
+            });
+            
+
+            let link = document.querySelector('nav ul li a[href*=' + id + ']');
+            if (link) {
+                link.classList.add('active-link');
+            }
+        }
+    });
+};
