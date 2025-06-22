@@ -696,23 +696,7 @@ footer .fa-heart {
     }
 
 
-    /* ----------------------------real code--------------------------------- */
-    /* nav ul li a {
-        color: #fff !important;
-        text-decoration: none;
-        padding: 8px 15px;
-        border: 1px solid rgba(255, 255, 255, 0.4);
-        border-radius: 25px;
-        display: inline-block;
-        transition: all 0.5s ease;
-        width: calc(100% - 30px);
-        text-align: center;
-        background-color: #ff004f;
-    } */
-    /* ----------------------------real code--------------------------------- */
-
-
-    /* ----------------------------second code imp--------------------------------- */
+    
     nav ul li a {
         color: #fff;
         background-color: #4b020251;
@@ -725,41 +709,21 @@ footer .fa-heart {
         transition: all 0.3s ease;
     }
 
-    /* ----------------------------second code imp--------------------------------- */
-
-
-
-
-
-
-    /* ----------------------------real code--------------------------------- */
-    /* nav ul li a::after {
-        content: none;
-    }  */
-    /* ----------------------------real code--------------------------------- */
+    
 
     nav ul li a::after {
         display: none;
     }
 
 
-    /* ----------------------------real code--------------------------------- */
-    /* nav ul li a:hover {
-        color: #fff;
-        background: #e60045;
-        border-color: #fff;
-        transform: translateY(-2px);
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}  */
-    /* ----------------------------real code--------------------------------- */
-
+   
     nav ul li a:hover {
         background-color: #3a3a3a;
         border-color: #fff;
         transform: translateY(-2px);
     }
 
-    /* ----------------------------real code--------------------------------- */
+   
     nav ul li a:active {
         transform: translateY(1px);
         box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3),
@@ -768,8 +732,7 @@ footer .fa-heart {
         border-color: #c4003d;
     }
 
-    /* ----------------------------real code--------------------------------- */
-
+   
     nav ul li a.active-link {
         background-color: #ff004f;
         /*test code */
@@ -891,6 +854,57 @@ footer .fa-heart {
         font-size: 16px;
     }
 
+ /* Glowing Animation */
+
+    #about .tab-links {
+        position: relative;
+        z-index: 0;
+        border: none;
+        background: transparent;
+    }
+
+    #about .tab-links::after {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        border-radius: 50px;
+        background-color: transparent;
+        border: 1px solid #ff004f;
+        transition: background-color 0.5s, color 0.5s;
+    }
+
+    #about .tab-links::before {
+        content: "";
+        background: linear-gradient(45deg,
+                #FF0000, #FF7300, #FF00C8, #FF0000);
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        background-size: 600%;
+        z-index: -2;
+        width: calc(100% + 4px);
+        height: calc(100% + 4px);
+        filter: blur(8px);
+        animation: glowing 20s linear infinite;
+        transition: opacity .3s ease-in-out;
+        border-radius: 50px;
+        opacity: 0;
+    }
+
+    #about .tab-links:hover::before {
+        opacity: 1;
+    }
+
+    #about .tab-links.active-link::after {
+        background-color: #ff004f;
+    }
+
+    
+    
     /* Skills Section */
 
     .skills-accordion {
