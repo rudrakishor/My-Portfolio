@@ -328,7 +328,6 @@ nav .fa-solid {
 .project-card {
     background: #262626;
     border-radius: 10px;
-    overflow: hidden;
     transition: transform 0.3s ease;
 }
 
@@ -429,6 +428,100 @@ nav .fa-solid {
 .project-links a i {
     margin-right: 8px;
 }
+
+
+
+
+/* --- Project Border Animation --- */
+
+@property --angle {
+    syntax: '<angle>';
+    initial-value: 0deg;
+    inherits: false;
+}
+
+@keyframes rotate-angle {
+    to {
+        --angle: 360deg;
+    }
+}
+
+.project-card {
+    position: relative;
+    isolation: isolate;
+    background: #262626;
+    border-radius: 10px;
+}
+
+.project-card .project-img-container {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+}
+
+.project-card .project-info {
+    position: relative;
+    z-index: 2;
+    background: #262626;
+    padding: 25px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.project-card::before,
+.project-card::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    animation: rotate-angle 4s linear infinite paused;
+
+    background: conic-gradient(from var(--angle),
+            transparent 50%,
+            #ff0033,
+            transparent 90%);
+}
+
+.project-card::after {
+    z-index: -2;
+    width: calc(100% + 20px);
+    height: calc(100% + 20px);
+    filter: blur(25px);
+}
+
+.project-card::before {
+    z-index: -1;
+
+    -webkit-mask: linear-gradient(white 0 0) content-box, linear-gradient(white 0 0);
+    mask: linear-gradient(white 0 0) content-box, linear-gradient(white 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: subtract;
+    padding: 4px;
+}
+
+.project-card:hover::before,
+.project-card:hover::after {
+    opacity: 1;
+    animation-play-state: running;
+}
+
+
+
+
+
+
+
+
+
+
 
 /* --- Contact Section --- */
 
@@ -599,7 +692,6 @@ footer .fa-heart {
 
     nav .fa-xmark {
         display: none;
-        /* Cross icon by default hide rahega */
         font-size: 25px;
         cursor: pointer;
     }
@@ -668,7 +760,7 @@ footer .fa-heart {
         z-index: 3;
     }
 
-    /* Menu Item Pop-up Animation Applied */
+    /* Menu Item Pop-up Animation */
 
     nav ul.active li {
         opacity: 1;
@@ -695,8 +787,6 @@ footer .fa-heart {
         transition-delay: 0.9s;
     }
 
-
-    
     nav ul li a {
         color: #fff;
         background-color: #4b020251;
@@ -709,21 +799,16 @@ footer .fa-heart {
         transition: all 0.3s ease;
     }
 
-    
-
     nav ul li a::after {
         display: none;
     }
 
-
-   
     nav ul li a:hover {
         background-color: #3a3a3a;
         border-color: #fff;
         transform: translateY(-2px);
     }
 
-   
     nav ul li a:active {
         transform: translateY(1px);
         box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3),
@@ -732,7 +817,7 @@ footer .fa-heart {
         border-color: #c4003d;
     }
 
-   
+
     nav ul li a.active-link {
         background-color: #ff004f;
         /*test code */
@@ -854,7 +939,8 @@ footer .fa-heart {
         font-size: 16px;
     }
 
- /* Glowing Animation */
+
+    /* Glowing Animation */
 
     #about .tab-links {
         position: relative;
@@ -903,8 +989,9 @@ footer .fa-heart {
         background-color: #ff004f;
     }
 
-    
-    
+
+
+
     /* Skills Section */
 
     .skills-accordion {
@@ -955,6 +1042,32 @@ footer .fa-heart {
         font-size: 14px;
         padding: 6px 12px;
     }
+
+    /* --- Glowing Border ALWAYS ON --- */
+
+    @media (max-width: 600px) {
+
+        .project-card::before,
+        .project-card::after {
+            opacity: 1;
+            animation-play-state: running;
+        }
+
+        .project-layer {
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .project-card:active .project-layer {
+            opacity: 1;
+        }
+
+        .project-card:active {
+            transform: translateY(-10px);
+        }
+    }
+
+
 
     /* Contact Section */
 
