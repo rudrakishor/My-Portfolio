@@ -9,11 +9,13 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 </head>
 
 <body>
 
     <!-------------------------------------------- Home Section ------------------------------------------->
+    <div id="particles-js"></div>
 
     <div id="header">
         <div class="container">
@@ -210,7 +212,7 @@
     <div id="projects">
         <div class="container">
             <h1 class="sub-title">My Projects</h1>
-        
+
             <div class="project-list">
                 <div class="project-card-wrapper">
                     <div class="project-card">
@@ -294,7 +296,73 @@
 
 
 
+        
+        <script>
+            particlesJS("particles-js", {
+                "particles": {
+                    "number": {
+                        "value": 80,
+                        "density": {
+                            "enable": true,
+                            "value_area": 800
+                        }
+                    },
+                    "color": {
+                        "value": "#ffffff"
+                    },
+                    "shape": {
+                        "type": "circle",
+                        "stroke": {
+                            "width": 0,
+                            "color": "#000000"
+                        }
+                    },
+                    "opacity": {
+                        "value": 0.5,
+                        "random": false
+                    },
+                    "size": {
+                        "value": 3,
+                        "random": true
+                    },
+                    "line_linked": {
+                        "enable": true,
+                        "distance": 150,
+                        "color": "#ff004f",
+                        "opacity": 0.4,
+                        "width": 1
+                    },
+                    "move": {
+                        "enable": true,
+                        "speed": 4
+                    }
+                },
+                "interactivity": {
+                    "events": {
+                        "onhover": {
+                            "enable": true,
+                            "mode": "repulse"
+                        },
+                        "onclick": {
+                            "enable": true,
+                            "mode": "push"
+                        }
+                    },
+                    "modes": {
+                        "repulse": {
+                            "distance": 100
+                        },
+                        "push": {
+                            "particles_nb": 4
+                        }
+                    }
+                },
+                "retina_detect": true
+            });
+        </script>
+
         <script src="script.js"></script>
+
 </body>
 
 </html>
