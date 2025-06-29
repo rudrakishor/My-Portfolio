@@ -26,14 +26,14 @@ body {
 
 /* --- Header & Navigation --- */
 
-#header {
+/* #header {
     width: 100%;
     height: 100vh;
     background-image: url(images/background.png);
     background-size: cover;
     background-position: center;
     background-color: #010201;
-}
+} */
 
 nav {
     display: flex;
@@ -657,14 +657,14 @@ footer .fa-heart {
 @media only screen and (max-width: 600px) {
     /* Header */
 
-    #header {
+/*     #header {
         background-image: url(images/background.png);
         background-size: cover;
         background-position: center;
         height: auto;
         padding-bottom: 50px;
         background-color: #010201;
-    }
+    } */
 
     .header-text {
         margin-top: 100px;
