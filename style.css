@@ -324,7 +324,7 @@ nav .fa-solid {
     z-index: 10;
 }
 
-/* --- Projects Section --- */
+* --- Projects Section --- */
 
 #projects {
     padding: 80px 0;
@@ -441,6 +441,23 @@ nav .fa-solid {
     margin-right: 8px;
 }
 
+
+
+
+/* --- Project Border Animation --- */
+
+@property --angle {
+    syntax: '<angle>';
+    initial-value: 0deg;
+    inherits: false;
+}
+
+@keyframes rotate-angle {
+    to {
+        --angle: 360deg;
+    }
+}
+
 .project-card {
     position: relative;
     isolation: isolate;
@@ -507,8 +524,7 @@ nav .fa-solid {
     opacity: 1;
     animation-play-state: running;
 }
-
-/*---- Skill Button Glowing Border ----*/
+ 
 
 
 
